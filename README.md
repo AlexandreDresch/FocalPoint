@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FocalPoint
 
-## Getting Started
+FocalPoint is a simple to-do list application built with Next.js. The goal is to provide a fast and efficient way to create and manage daily tasks.
 
-First, run the development server:
+Visit [FocalPoint](https://focal-point-eta.vercel.app)
+
+## Features
+
+- Add and remove tasks
+- Mark tasks as completed
+  -Modal for managing tasks
+
+## Technologies Used
+
+- Next.js: React framework for page rendering.
+- TypeScript: Typed superset of JavaScript.
+- Zod: TypeScript-first schema declaration and validation library.
+- SCSS: CSS preprocessor for cleaner styles.
+- React-hook-form: Simple and performant form validation library for React, enabling easier form handling and input validation.
+- Redux Toolkit: Global state management.
+- Docker: Containerization for easier packaging and deployment.
+
+## Installation and Running the Project
+
+### Without Docker:
+
+#### Clone the repository:
+
+```bash
+git clone https://github.com/AlexandreDresch/FocalPoint.git
+```
+
+#### Install dependencies:
+
+```bash
+cd FocalPoint
+npm install
+```
+
+#### Run the application in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Access the app in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[localhost](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### With Docker:
 
-## Learn More
+#### Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git clone https://github.com/AlexandreDresch/FocalPoint.git
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Build the Docker image:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker build -t FocalPoint .
+```
 
-## Deploy on Vercel
+#### Run the container:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+docker run -p 3000:3000 FocalPoint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Access the app in your browser:
+
+[localhost](http://localhost:3000)
+
+### Using Docker Compose
+
+If you prefer Docker Compose, follow these steps:
+
+#### Start the container:
+
+```bash
+docker-compose up
+```
+
+#### Access the app in your browser:
+
+[localhost](http://localhost:3000)
+
+
+## Project Structure
+```bash
+├── app            # Next.js pages, layout and global css
+├── components       # Reusable components like Button, Modal, TaskItem
+├── lib              # Redux configuration and hooks
+├── public           # Static assets
+├── schemas           # application schemas
+├── types          # types used in the application
+├── utils           # utility functions
+├── Dockerfile       # Docker container definition
+├── docker-compose.yml # Optional Docker Compose configuration
+└── README.md        # Project documentation
+```

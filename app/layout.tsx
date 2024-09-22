@@ -4,6 +4,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.scss";
 
 import Header from "@/components/header";
+import StoreProvider from "./store-provider";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -23,8 +24,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${interTight.variable}`}>
-        <Header name="Alexandre" />
-        {children}
+        <StoreProvider>
+          <Header name="Alexandre" />
+          {children}
+        </StoreProvider>
       </body>
     </html>
   );

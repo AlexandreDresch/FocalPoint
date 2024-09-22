@@ -1,0 +1,93 @@
+.overlay-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+.modal-container {
+  background-color: #ffffff;
+  padding: 32px;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  h2 {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    width: 450px;
+    height: fit-content;
+  }
+
+  .description {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+    letter-spacing: -0.32px;
+
+    label {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    input {
+      padding: 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #d7dde9;
+    }
+  }
+
+  .error-message {
+    color: #d30707;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    button {
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      gap: 20px;
+      flex-direction: row;
+    }
+  }
+}

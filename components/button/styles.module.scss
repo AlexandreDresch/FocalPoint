@@ -1,0 +1,33 @@
+.button-container {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button--primary {
+  background: linear-gradient(90deg, #0796d3, #53c0f0);
+  color: white;
+}
+
+.button--secondary {
+  background: #e7eefb;
+  color: #000000;
+}
+
+.button--danger {
+  background: linear-gradient(90deg, #d30707, #f05353);
+  color: white;
+}
+
+.button--medium {
+  width: 185px;
+}
+
+.button--large {
+  width: 100%;
+  max-width: 450px;
+}
